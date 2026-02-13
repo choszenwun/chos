@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choszenwun</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Georgia', serif;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.light {
+        background: linear-gradient(135deg, #f5f5dc 0%, #ffffff 100%);
+        color: #2c2c2c;
+    }
+
+    body.dark {
+        background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+        color: #f5f5dc;
+    }
+
+    .container {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .halo {
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 40px;
+        border: 3px solid;
+        border-radius: 50%;
+        opacity: 0.6;
+        transition: border-color 0.3s ease;
+    }
+
+    body.light .halo {
+        border-color: #d4af37;
+    }
+
+    body.dark .halo {
+        border-color: #ffd700;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+        letter-spacing: 2px;
+        font-weight: 300;
+        text-transform: lowercase;
+        position: relative;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .link {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border: 2px solid;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        display: block;
+        letter-spacing: 1px;
+    }
+
+    body.light .link {
+        color: #2c2c2c;
+        border-color: #d4af37;
+        background: rgba(212, 175, 55, 0.1);
+    }
+
+    body.light .link:hover {
+        background: rgba(212, 175, 55, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    body.dark .link {
+        color: #f5f5dc;
+        border-color: #ffd700;
+        background: rgba(255, 215, 0, 0.05);
+    }
+
+    body.dark .link:hover {
+        background: rgba(255, 215, 0, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+    }
+
+    .toggle {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        background: none;
+        border: 2px solid;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body.light .toggle {
+        border-color: #d4af37;
+        color: #d4af37;
+    }
+
+    body.dark .toggle {
+        border-color: #ffd700;
+        color: #ffd700;
+    }
+
+    .toggle:hover {
+        transform: rotate(180deg);
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .halo {
+            width: 150px;
+            top: -60px;
+        }
+
+        .links {
+            max-width: 300px;
+            gap: 1rem;
+        }
+
+        .link {
+            font-size: 1rem;
+            padding: 0.9rem 1.5rem;
+        }
+    }
+</style>
+```
+
+</head>
+<body class="dark">
+    <button class="toggle" onclick="toggleTheme()" aria-label="Toggle theme">☼</button>
+
+```
+<div class="container">
+    <div class="halo"></div>
+    <h1>choszenwun</h1>
+    <div class="links">
+        <a href="https://open.spotify.com/artist/choszenwun" class="link" target="_blank">Spotify</a>
+        <a href="https://music.apple.com/artist/choszenwun" class="link" target="_blank">Apple Music</a>
+        <a href="https://soundcloud.com/choszenwun" class="link" target="_blank">SoundCloud</a>
+        <a href="https://instagram.com/choszenwun" class="link" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@choszenwun" class="link" target="_blank">TikTok</a>
+        <a href="https://youtube.com/@choszenwun" class="link" target="_blank">YouTube</a>
+    </div>
+</div>
+
+<script>
+    function toggleTheme() {
+        const body = document.body;
+        const toggle = document.querySelector('.toggle');
+        
+        if (body.classList.contains('dark')) {
+            body.classList.remove('dark');
+            body.classList.add('light');
+            toggle.textContent = '☾';
+        } else {
+            body.classList.remove('light');
+            body.classList.add('dark');
+            toggle.textContent = '☼';
+        }
+    }
+</script>
+```
+
+</body>
+</html>
