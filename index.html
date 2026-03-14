@@ -54,12 +54,12 @@
         /* ── HEADER ── */
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             animation: fadeDown 0.7s ease-out both;
         }
 
         .halo {
-            width: 80px; height: 16px;
+            width: 110px; height: 22px;
             border: 1.5px solid #C9A84C;
             border-radius: 50%;
             margin: 0 auto 4px;
@@ -70,7 +70,7 @@
 
         h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 4.5rem;
+            font-size: 6rem;
             letter-spacing: 12px;
             text-indent: 12px;
             line-height: 1;
@@ -82,7 +82,7 @@
         }
 
         .handle {
-            font-size: 0.78rem;
+            font-size: 1rem;
             font-weight: 300;
             letter-spacing: 4px;
             color: rgba(255,255,255,0.25);
@@ -146,7 +146,7 @@
         .tn { border-color: rgba(255,252,0,0.18); }
         .td { border-color: rgba(88,101,242,0.25); }
         .tb { border-color: rgba(247,147,26,0.25); background: rgba(247,147,26,0.04); }
-        .te { border-color: rgba(201,168,76,0.25); background: rgba(201,168,76,0.04); }
+        .te { border-color: rgba(201,168,76,0.25); background: rgba(201,168,76,0.04); color: rgba(201,168,76,0.85); }
 
         /* ── FOOTER ── */
         .footer {
@@ -254,8 +254,8 @@
         /* ── RESPONSIVE SIZING ── */
         /* Mobile: tile size driven by viewport height so it fills the screen */
         :root {
-            --tile: 17vmin;
-            --gap: 3vmin;
+            --tile: 20vmin;
+            --gap: 3.5vmin;
         }
 
         /* Desktop / large screens: fixed comfortable size */
@@ -352,7 +352,7 @@
 
         <button class="tile te" onclick="document.getElementById('emailModal').classList.add('open')">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span style="color:rgba(201,168,76,0.8);">inquire</span>
+            inquire
         </button>
 
     </div>
@@ -368,7 +368,7 @@
         <p class="sheet-sub">a genius admires simplicity</p>
         <div class="btc-box">
             <div class="btc-lbl">bitcoin address</div>
-            <div class="btc-addr" id="btcAddr">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</div>
+            <div class="btc-addr" id="btcAddr">bc1qert9ag5rg7n4dqppar3zylccjlgju30wxw9j8c</div>
         </div>
         <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('btcAddr').innerText);this.textContent='copied ✓';setTimeout(()=>this.textContent='copy address',1800)">copy address</button>
     </div>
@@ -380,4 +380,12 @@
         <div class="pill"></div>
         <h2>Inquire</h2>
         <p class="sheet-sub">state your intention &amp; budget</p>
-        <a class="email-link" href="/cdn-cgi/l/email-protection#1073787f636a757e67657e507f65647c7f7f7b3e737f7d2f6365727a7573642d597e6165796269"><span
+        <button class="copy-btn" style="background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.2);color:rgba(201,168,76,0.85);"
+            onclick="navigator.clipboard.writeText('choszenwun@outlook.com');this.textContent='copied ✓';setTimeout(()=>this.textContent='choszenwun@outlook.com',1800)">
+            choszenwun@outlook.com
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
